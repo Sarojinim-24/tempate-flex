@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Template-flex</title>
+        <script src="https://kit.fontawesome.com/8d92229b07.js" crossorigin="anonymous"></script>
+        <style>
+        *{
+             box-sizing: border-box;
+             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',  Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        img{
+           width: 100%;
+        }
+        body{
+            margin: 0;
+            background-image: url(image/kataklimt-back.jpg);
+        }
+        .header{
+            display: flex;
+            justify-content: center;
+            background-color: rgb(255 255 255);
+            padding: 30px 0 35px; 
+        }
+        .header h2{
+            margin: 0;  
+            color: rgb(44 44 44);
+            font-weight: 100;
+            font-size:50px;
+            line-height: 0.8em;
+        }
+         span{
+            color: rgb(232 83 86);
+            font-weight: 400;
+        }
+        .header p{
+            margin: 0;  
+            color: rgb(97 97 97);
+            font-weight: 100;
+            font-size: large;
+        }
+        .header  a{
+            text-decoration: none;    
+            color: rgb(162 162 162);                          
+            padding:30px 15px;
+            font-size:1.2rem;
+            font-weight: 100;
+        }
+        .header a:hover{
+            color: hsl(358.13deg 76.19% 91.76%);
+            background-color: hsl(358.79deg 76.41% 61.76%);
+            border-radius:50%;
+        }
+        .header a:focus{
+            background-color: yellowgreen;
+            border-radius: 50%;
+            color: black;
+        }
+        .row1{
+            width: 85%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .row1>div{
+            width: 50%;
+        }
+        .row1>div:nth-child(2){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .row2{
+            display: flex;
+            justify-content: center;
+            padding-top: 40px ;
+        }
+        .row2>div:first-child{
+            width: 85%;
+        }
+        .row2 h2{
+            color: rgb(249 249 249);
+            font-weight: 100;
+            margin: 0;
+            font-size:60px;
+        }
+        .row2>div>div:nth-child(2){
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 20px 0px;
+        }
+        .row2>div>div>div:nth-child(1){
+            width: 25%;
+           
+        } 
+        .row2>div>div>div:nth-child(2){
+        width: 75%;
+        line-height: 1.5;
+        padding-left: 30px;
+        border-left: solid rgb(45 45 45);  
+        }
+        .row2 p{
+            color:rgb(108 105 104);
+            margin: 0;
+        }
+        .row2 a{
+            text-decoration: none;
+            color: rgb(232 83 86);
+        }
+        .row2 a:hover{
+            color: lightcoral;
+            
+        }
+        .row2 a:focus{
+            color: yellowgreen;
+        }
+        .row3{
+            display: flex;
+            justify-content: center;
+            background-color:rgb(0,0,0);
+            padding: 20px 0 50px 0;
+            border-top: solid rgb(45 45 45) 2px;
+            border-bottom: solid rgb(45 45 45) 2px;
+        }
+        .row3>div{
+            width: 85%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .row3>div>div{
+            width: 23%;
+        }
+        .row3 h3{
+            font-weight: 400;
+            color: rgb(253 253 253);
+            font-size: xx-large;
+        }
+        .row3 h4{
+            color:white;
+            margin-bottom: 0;
+        }
+        .row3 p{
+            color: rgb(78 78 78);
+            margin: 0 0 30px 0;
+        }
+        .row3 input{
+            background-color:  rgb(232 83 86);
+            padding: 10px 20px;
+            color: white;
+            font-weight: 500;
+            border: none;
+            cursor: grab;
+        }
+        .row3 input:hover{
+            background-color: lightcoral;
+            color: rgb(78, 5, 234);
+            border-radius: 50%;
+        }
+        .row3 input:active{
+            background-color: rgb(252, 85, 2);
+            color: rgb(252, 251, 251);
+            border-radius: 20px;
+        }
+        .row3 input:focus{
+            background-color: yellowgreen;
+            border-radius: 20px;
+            color: black;
+        }
+        .row4{
+            display: flex;
+            justify-content: center;
+        }
+        .row4>div>div{
+            width: 48%;
+        }
+        .row4>div{
+            width: 85%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 30px 0;
+        }
+
+        .row41{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        }
+        .row41>div{
+            width: 48%;
+        }
+        section[class="row4"] h2{
+            color: white;
+            font-weight: 400;
+            font-size: xx-large;
+        }
+        .row41>div:nth-child(2)>div{
+            display: flex;
+            justify-content: space-between;
+        }
+        .row41 h4{
+            color: white;
+            margin: 0;
+            font-weight: 400;
+        }
+        .row41 p{
+            margin-top: 12px;
+            color: rgb(78 78 78);
+        }
+        .row41 hr{
+            height: 3px;
+            background-color:black ;
+            margin: 0;
+            width: 90%;
+            border:solid rgb(45 45 45) 1px;
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            color: rgb(232 83 86);
+            line-height: 2;
+        }
+        li::before{
+            content: '\21AC';
+            margin-right: 5px;
+        }
+        li:hover{
+            background-color: rgba(6, 249, 6, 0.736);
+            color: rgb(4, 4, 4);
+        }
+        .row42>div{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+        .row42>div>div{
+            width: 21%;
+        }
+        .footer{
+            background-color: white;
+            padding: 40px 0;
+            display: flex;
+            justify-content: center;
+        }
+        .row5{
+            display: flex;
+            flex-wrap: wrap;
+            width: 85%;
+        }
+        .row5>div:first-child{
+            width: 50%;
+        }
+        .row5>div:nth-child(2){  
+            width: 50%; 
+            padding: 10px 0;
+            text-align: right;
+        }
+        .footer h4{
+            color:rgb(162 162 162);
+            font-weight: 400;
+        } 
+        .footer i{
+            color:rgb(250, 249, 249);
+            padding: 15px;
+            background-color: rgb(232 83 86);
+            border-radius: 50%;
+        }
+        i:hover{
+            background-color: rgb(0, 255, 0);
+            border-radius: 20%;
+            color: black;
+        }
+        i:active{
+            visibility:hidden;
+        }
+        @media (max-width:576px){
+            .row1>div,.row2>div>div>div:nth-child(2),.row3>div>div,.row4>div>div,.row41>div:first-child,.row41>div:last-child{
+                width: 100%;
+            }
+            .row1>div:first-child{
+                text-align: center;
+                margin-bottom: 5px;
+            }
+            .row2>div>div>div:nth-child(1),.row5>div:nth-child(n){
+                width: 100%;
+                text-align: center;
+            }  
+            .row41>div:nth-child(2)>div{
+                justify-content: space-evenly;
+            }
+            .row42>div>div{
+                width: 48%;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <div class="row1">
+                <div>
+                    <h2><span>K</span>ata<span>K</span>limt</h2>
+                    <p>Photography</p>
+                </div>
+                <div>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Folio</a>
+                    <a href="#">Biog</a>
+                    <a href="#" style="margin-right: 0;">Contact</a>
+                </div>
+            </div>
+        </header>
+        <section class="row2">
+            <div>
+                <div>
+                    <img src="kataklimt-main.jpg" alt="">
+                </div>
+                <div>
+                    <div>
+                        <h2><span>W</span>elcome!</h2>
+                    </div>
+                    <div>
+                        <p><a href="#">Click here</a> for more info about this free wibsite template created by TemplateMonster.com. 
+                            This is a Bootstrap template that goes with serveral layout options 
+                            (for desktop,tablet, smartphone landscape and portrait) to fit popular screen resolutions.
+                            The PSO source files of this template are availabe for free for the members of TemplateMonster.com. 
+                            Feel free to get thm!</p>
+                    </div>
+                </div> 
+            </div>
+        </section>
+        <section class="row3">
+            <div>
+                <div> 
+                    <h3>Fashion</h3>
+                    <img src="kataklimt-fasion.jpg" alt="">
+                    <h4>At vero eos et accusamus et iusto</h4>
+                    <p>Odio digissmoss ducimus qui blanditis praesentum voluptaitum</p>
+                    <input type="button" value="Read More">
+                </div>
+                <div>
+                    <h3>Nature</h3>
+                    <img src="kataklimt-nature.jpg" alt="">
+                    <h4>
+                        Deleniti atque corrupti quos
+                    </h4>
+                    <p>Dolores et ques molestias excepturi sint occaecaati cupiditate non</p>
+                    <input type="button" value="Read More">
+                </div>
+                <div>
+                    <h3>Love story</h3>
+                    <img src="kataklimt-love.jpg" alt="">
+                    <h4>Similique sunt on culpa qui officia</h4> 
+                    <p>Deserunt mollitia anini,id est laburum et dolorum fuga</p>
+                    <input type="button" value="Read More">
+                </div>
+                <div>
+                    <h3>Fine art</h3>
+                    <img src="kataklimt-fine.jpg" alt="">
+                    <h4>Similique sunt on culpa qui officia</h4>
+                    <p>Deserunt mollitia anini,id est laburum et dolorum fuga</p>
+                    <input type="button" value="Read More">
+                </div>
+            </div>
+        </section>
+        <section class="row4">
+            <div>
+                <div>
+                    <h2>Shortly about me</h2>
+                    <div class="row41">
+                        <div>
+                            <img src="kataklimt-short.jpg" alt="">
+                        </div>
+                        <div>
+                            <h4>Sed ut perspictis unde omins natus error volupatem acuusantuim doloue laundantuim,totam rem.</h4>  
+                            <p> Aperiam, eaque ipsa quae ab illo vertatias et beatae vitaww dicta sunt explicabo nemo enim ipsam voluptatem qula 
+                            voluptas sit aspernatur aut odit aut fugit sed</p>
+                            <hr>
+                            <div>
+                                <ul>
+                                    <li>Compaigns</li>
+                                    <li>Portraits</li>
+                                    <li>Fashion</li>
+                                    <li>Fine Art</li>
+                                </ul>
+                                <ul>
+                                    <li>Advertising</li>        
+                                    <li>Lifestyle</li>
+                                    <li>Love story</li>
+                                    <li>Landscape</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row42">
+                    <h2>Latest Photoshoots</h2>
+                    <div>
+                        <div>
+                            <img src="kataklimt-last-r1-c1.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="kataklimt-last-r1-c2.jpg" alt="">
+                        </div>
+                        <div> 
+                            <img src="kataklimt-r1-c3.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="kataklimt-r1-c4.jpg" alt="">
+                        </div>  
+                    </div>
+                    <div>
+                        <div>
+                            <img src="kataklimt-r2-c1.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="kataklimt-r2-c2.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="kataklimt-r2-c3.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="kataklimt-r2-c4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div >
+                            <img src="kataklimt-r3-c1.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="kataklimt-r3-c2.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="kataklimt-r3-c3.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="kataklimt-r3-c4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="row5">
+                <div>
+                    <h4>
+                        &copy; Copyright.
+                    </h4>
+                </div>
+                <div>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i> 
+                    <i class="fa-brands fa-google-plus-g"></i>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
